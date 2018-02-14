@@ -15,16 +15,13 @@ namespace SortingAlgorithms.QuickSort
 
         public static void Sort(int[] arr, int start, int end)
         {
-            // Ռեկուրսիայի բազան
             if (end - start == 0) return;
 
-            int pivot = arr[(end + start) / 2]; // Ընտրում ենք առանցքային տարրը
+            int pivot = arr[(end + start) / 2]; 
             int swap;
             int i = start;
             int j = end;
 
-            //  Կարգավորում ենք զանգվածը հետևյալ սկզբունքով՝
-            //  առանցքային տարրից փոքր կամ հավասար տարրերը զանգվածի "ձախ" կողմում իսկ մեծ տարրերը "աջ"
 
             while(i <= j)
             {
@@ -46,10 +43,9 @@ namespace SortingAlgorithms.QuickSort
                 }
             }
 
-            //  Կանչում ենք կարգավորման ֆունկցիան երկու ենթազանգվածների համար
              
-            Sort(arr, start, i-1);     //  Առանցքային տարրից փոքր կամ հավասար տարրերի ենթազանգվածի
-            Sort(arr, i, end);         //  Առանցքային տարրից մեծ տարրերի ենթազանգվածի
+            Sort(arr, start, i-1);     
+            Sort(arr, i, end);         
         }
     }
 }
